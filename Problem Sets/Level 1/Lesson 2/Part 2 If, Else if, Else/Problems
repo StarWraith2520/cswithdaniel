@@ -6,9 +6,13 @@ else {System.out.println("F");}
 
 Determine the output when:
   a. grade is 90
+  A
   b. grade is 83
+  B
   c. grade is 79
+  C
   d. grade is 57
+  F
 
 2. Consider the following code:
 if (grade >= 90) {System.out.println("A");}
@@ -18,9 +22,16 @@ else {System.out.println("F");}
 
 Determine the output when:
   a. grade is 90
+  A
+  B
+  C
   b. grade is 83
+  B
+  C
   c. grade is 79
+  C
   d. grade is 57
+  F
 
 3. Consider the following code:
 if (grade >= 90) {System.out.println("A");}
@@ -30,9 +41,15 @@ else {System.out.println("F");}
 
 Determine the output when:
   a. grade is 90
+  A
+  C
   b. grade is 83
+  B
+  C
   c. grade is 79
+  C
   d. grade is 57
+  F
 
 4. Consider the following code:
 if (grade >= 90) System.out.println("A");
@@ -42,11 +59,20 @@ else; System.out.println("F");
 
 Determine the output when:
   a. grade is 90
+  A
+  B
+  F
   b. grade is 83
+  B
+  F
   c. grade is 79
+  C
+  F
   d. grade is 57
+  F
 
 What bad practice causes this program to be different from problem 1?
+Putting ; immediately after else (also maybe putting no {}?)
 
 5. Determine the output:
 int i1 = 7;
@@ -59,8 +85,18 @@ if (i1 == 8) System.out.println(++i1);
 else {} if (i1 == 9) {System.out.println(i1++);}
 System.out.println(i1);
 
+Output:
+7
+9
+9
+10
+
 6. Fix all errors:
 if (6 > 3) System.out.println(5); System.out.println(9);
 else if (5 < 6) System.out.println(7); System.out.println(3);
 else System.out.println(3);
 
+Fixed code:
+if (6 > 3) {System.out.println(5); System.out.println(9);}
+else if (5 < 6) {System.out.println(7); System.out.println(3);}
+else {System.out.println(3);}
