@@ -1,15 +1,25 @@
 1.
   a. What is the difference between declaring and initializing a variable?
+  Initializing a variable gives it a value, while declaring doesn't.
   b. Can you declare a variable without initializing it?
+  Yes
   c. Can you initialize a variable without declaring it?
+  No
   d. Can you print a variable without initializing it?
+  No
 
 2.
   a. List all 8 primitive data types.
+  int, boolean, char, byte, long, short, double, float
   b. Identify the primitive data types that store integers only. List them in increasing order of memory size.
+  byte, short, int, long
   c. Identify the primitive data types that store numbers including non-integers.
      Which one has more precision and takes up more memory space?
+     double and float.
+     (double has more precision and takes up more space)
   d. What do the remaining primitive data types store?
+  boolean - true or false
+  char - a single character
   
 3. Explain everything that is wrong with the following code:
 int i;
@@ -18,11 +28,19 @@ int i = 5;
 j = 7;
 System.out.println(k);
 
+Problems:
+i is not initialized before it is printed (it is initialized after it is printed, which is wrong).
+i is declared twice. //(i is declared twice (int i; and int i = 5;). If you want to initialize it without declaring it then do i = 5;)
+j is not declared (is given a value before it is declared)
+k doesn't even exist.
+
 4. Use the following variables to print "5false8"
 int i = 5;
 boolean j = false;
 int k = 2;
 long l = 6;
+
+System.out.println("" + i + j + (k + l));
 
 5. Determine the output:
 int i = 1;
@@ -31,17 +49,28 @@ int k = 3;
 System.out.println(i + "abc" + j + k);
 System.out.println(i + "abc" + (j + k));
 
+Output:
+1abc23
+1abc5
+
 6. Determine the output:
 int i = 9;
 int j = 2;
 i %= j;
 System.out.println("" + i + j);
 
+Output:
+12
+
 7. Determine the output:
   a. int q = 3;
      System.out.println(q++);
+  Output:
+  3
   b. int q = 3;
      System.out.println(++q);
+  Output:
+  4
 
 8.
   a. Determine the output:
@@ -51,4 +80,13 @@ System.out.println("" + i + j);
   d2 = d1;
   System.out.println(d1 + " " + d2);
   
-  b. Did the code successfully swap the variables? If not, fix the code to make it swap the variables.
+  b. Did the code successfully swap the variables? If not, fix the code to make it swap the variables. 
+  No, the code did not successfully swap the variables.
+  
+  Fixed code:
+  double d1 = 5.7;
+  double d2 = 9.5;
+  double temp = d1;
+  d1 = d2;
+  d2 = temp;
+  System.out.println(d1 + " " + d2);
