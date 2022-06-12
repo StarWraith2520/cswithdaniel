@@ -4,12 +4,31 @@ Public class 1Lesson
     system.out.print(asdf)
 }
 
+public is capitalized - it should be lowercase. 1 should not be before Lesson. We need public static void main (String[] args) {} - main method. 
+System should be capitalized.
+There should be quotation marks around asdf - "asdf". Need a semicolon after ("asdf").
+
+Fixed code:
+public class Lesson1
+{
+    public static void main(String[] args)
+    {
+        System.out.print("asdf");
+    }
+}
+
+
 2.
     a. What is the difference between System.out.print("text"); and System.out.println("text");
+    println makes a new line after the "text"
     b. How do you print a quotation mark?
+    \"
     c. How do you print a backslash?
+    \\
     d. What does printing "\n" do?
+    Makes a new line
     e. What does // do?
+    Comments out (everything to the right of it)
 
 3. Determine the output:
 System.out.print("qwerty");
@@ -20,6 +39,12 @@ System.out.println();
 System.out.println("//");
 //System.out.println("//");
 
+Output:
+qwertyasdf
+zxcv
+
+//
+
 
 4. Create a program that prints the following:
        
@@ -28,3 +53,15 @@ JJJJJJJ    A     V       V    A    \
    J     AAAAA     V   V    AAAAA    \
    J    A     A     V V    A     A    \
 JJJJ   A       A     V    A       A    \
+
+public class Problem4
+{
+    public static void main(String[] args)
+    {
+        System.out.println("JJJJJJJ    A     V       V    A    \"
+        System.out.println("   J      A A     V     V    A A    \");
+        System.out.println("   J     AAAAA     V   V    AAAAA    \");
+        System.out.println("   J    A     A     V V    A     A    \");
+        System.out.println("JJJJ   A       A     V    A       A    \");
+    }
+}
