@@ -11,11 +11,28 @@ System.out.println(6 % 2 == 0 && 6 > 0 || 6 < 5);
 System.out.println(6 % 2 == 0 ^ 6 > 0 || 6 < 5);
 System.out.println(6 % 2 == 0 || 6 > 0 ^ 6 < 5);
 
+Output:
+true
+true
+false
+false
+true
+true
+true
+true
+true
+false
+true
+
 2.
   a. Can an if block exist without an else block?
+  Yes
   b. Can an else block exist without an if statement?
+  No
   c. Can an if block be directly followed by more than one else block?
+  No
   d. What happens when an if block or else block has no brackets?
+  The next statement is treated as if in brackets.
   
 3. Find all differences between the following blocks of code:
   a. if(1<2&&3<4) {
@@ -26,6 +43,7 @@ System.out.println(6 % 2 == 0 || 6 > 0 ^ 6 < 5);
          System.out.println("a");
      }
 
+They are the same, just have different spaces size separations. Java is not space sensitive.
 4. Determine the output:
 if (6 < 7 && 8 > 6)
 {
@@ -39,6 +57,10 @@ else
     else System.out.println("e");
     System.out.println("f");
 }
+
+Output:
+a
+c
 
 5. Determine the output:
 int i = 6;
@@ -56,3 +78,6 @@ else
 if (i == 1) {System.out.println(i);}
 else {System.out.print("not done");}
 System.out.println("qwerty");
+
+Output:
+not doneqwerty
