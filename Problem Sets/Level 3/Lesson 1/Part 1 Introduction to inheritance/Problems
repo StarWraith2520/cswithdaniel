@@ -1,16 +1,28 @@
 1. Determine whether the following statements are true or false:
   a. A subclass inherits all variables and methods from its superclass.
+  True
   b. A subclass inherits all constructors from its superclass.
+  False
   c. The super() call to the superclass constructor may be omitted if the superclass has only one constructor.
+  Flase
   d. There can be two super() calls in a constructor.
+  False
   e. Creating a method with the same name and parameter types as a superclass method is allowed.
+  True
   f. Creating a method with the same name and parameter types as a superclass but with different return types is allowed.
+  False
   g. A subclass can directly call methods of its superclass.
+  True
   h. A relation where X extends Y, Y extends Z, and Z extends X is allowed.
+  False
   i. Country extends City is a valid inheritance relation.
+  False
   j. City extends Country is a valid inheritance relation.
+  False
   k. Apple extends Fruit is a valid inheritance relation.
+  True
   l. Grass extends Green is a valid inheritance relation.
+  False
 
 
 2.
@@ -21,6 +33,36 @@
   e. Create a method in Circle named circumference that returns the circumference (which is Math.PI * 2 * radius).
   f. Verify that the Circle class works by creating an instance of Circle in the main method.
      Both the area and circumference methods should work properly.
+
+class Oval
+{
+   double radius1, radius2;
+   public Oval(double r1, double r2)
+   {
+      radius1 = r1;
+      radius2 = r2;
+   }
+   public double area()
+   {
+      return Math.PI * radius1 * radius2;
+   }
+}
+class Circle extends Oval
+{
+   public Circle(double r1)
+   {
+      super(r1, r1);
+   }
+   public double circumference()
+   {
+      return Math.PI * 2 * radius1;
+   }
+}
+
+Testing:
+Circle c1 = new Circle(5);
+System.out.println(c1.area());
+System.out.println(c1.circumference());
 
 
 Challenge Problem:
@@ -40,3 +82,32 @@ Challenge Problem:
      and calls the other constructor in Rectangle, with the coordinates of the lower point as (0, 0)
   h. Create a rectangle with length 5 and width 7 (no specified coordinates should be passed to the constructor).
   i. Display the points of the rectangle using the display method in Polygon.
+
+
+class Point
+{
+   double x, y;
+   public Point(double x1, double y1)
+   {
+      x = x1;
+      y = y1;
+   }
+}
+class Polygon
+{
+   Point[] pArr;
+   public Polygon(Point[] p1)
+   {
+      pArr = new Point[p1.length];
+      for (int i = 0; i < p1.length; i++)
+      {
+         pArr[i] = p1[i];
+      }
+   }
+   public void set(int idx, double x1, double y1)
+   {
+}
+
+
+
+
