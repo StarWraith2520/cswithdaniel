@@ -1,12 +1,13 @@
 1. Fix the errors:
-
+import java.util.Scanner;
 public class Main
 {
-  public static void main(String args)
+  public static void main(String[] args)
   {
+    Scanner input = new Scanner(System.in);
     System.out.print("Enter an integer: ");
     int i = input.nextInt();
-    System.out.println("You entered " i);
+    System.out.println("You entered " + i);
   }
 }
 
@@ -16,6 +17,19 @@ public class Main
 Sample Output:
 Enter two integers: 5 7
 5 + 7 = 12
+
+import java.util.Scanner;
+public class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner input = new Scanner(System.in);
+    System.out.print("Enter two integers: ");
+    int i = input.nextInt();
+    int j = input.nextInt();
+    System.out.println(i + " + " + j + " = " + (i + j));
+  }
+}
 
 
 3. Assume that the user enters
@@ -32,12 +46,29 @@ String s = input.next() + input.next();
 System.out.println(s + input.nextInt() + input.next());
 System.out.println(input.next());
 
+16
+1qwe3abc 
+def
 
 4. Prompt the user for three words and print them in reverse order.
 
 Sample Output:
 Enter three words: abc 567 q12
 q12 567 abc
+
+import java.util.Scanner;
+public class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner input = new Scanner(System.in);
+    System.out.print("Enter three words: ");
+    String a = input.next();
+    String b = input.next();
+    String c = input.next();
+    System.out.println(c + " " + b + " " + a);
+  }
+}
 
 
 5. Prompt the user for an integer n.
@@ -49,6 +80,23 @@ Enter an integer: 4
 Enter 4 integers: 1 9 -3 57
 The sum of the 4 integers is 64.
 
+import java.util.Scanner;
+public class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner input = new Scanner(System.in);
+    System.out.print("Enter an integer n: ");
+    int n = input.nextInt();
+    System.out.println("Enter " + n + " integers: ");
+    int sum = 0;
+    for (int i = 0; i < n; i++)
+    {
+      sum += input.nextInt();
+    }
+    System.out.println("The sum of the " + n + " integers is " + sum + ".");
+  }
+}
 
 6. Prompt the user for an integer. Return the letter grade that corresponds to this integer:
 90 or above: A
@@ -70,4 +118,23 @@ A
 Enter an integer: 74
 C
 Enter an integer: -1
+
+import java.util.Scanner;
+public class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner input = new Scanner(System.in);
+    while (true)
+    {
+      System.out.print("Enter an integer: ");
+      int g = input.nextInt();
+      if (g < 0) {break;}
+      if (g >= 90) {System.out.println("A");}
+      else if (g >= 80) {System.out.println("B");}
+      else if (g >= 70) {System.out.println("C");}
+      else {System.out.println("F");}
+    }
+  }
+}
 
