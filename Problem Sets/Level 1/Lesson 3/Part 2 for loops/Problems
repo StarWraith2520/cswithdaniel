@@ -3,32 +3,102 @@
   b. Determine the output after the errors are fixed.
   c. What is the value of i after the code is executed?
 
-for (i = 0; i < 5; i++)
+for (int i = 0; i < 5; i++)
 {
   System.out.println(i);
 }
+
+Output:
+0
+1
+2
+3
+4
+
+i doesn't have a value since it went out of scope after the code is executed.
 
 2. Consider the code shown below.
   a. Fix all errors.
   b. Determine the output after the errors are fixed.
   c. What is the value of i after the code is executed?
 
-for (int i = 0; i < 5; i++;)
+for (int i = 0; i < 5; i++)
 {
-  System.out.println(i)
+  System.out.println(i);
   i++;
 }
 
+Output:
+0
+2
+4
+
+i went out of scope again.
+
 
 3. Use a for loop to print the integers from 0 to 20 inclusive.
+for (int i = 0; i <= 20; i++)
+{
+  System.out.println(i);
+}
 4. Use a for loop to print the even integers from 0 to 20 inclusive.
+for (int i = 0; i <= 20; i += 2)
+{
+  System.out.println(i);
+}
 5. Use a for loop to print the powers of 2 from 1 to 10000 inclusive (including 1).
+for (int i = 1; i < 10000; i *= 2)
+{
+  System.out.println(i);
+}
 6. Print the integers from 0 to 100 inclusive that don't have a units digit of 4.
+for (int i = 0; i <= 100; i++)
+{
+  if (i % 10 != 4) {System.out.println(i);}
+}
 7. Print the sum of the even integers from 0 to 100 inclusive.
+int sum = 0;
+for (int i = 0; i <= 100; i += 2)
+{
+  sum += i;
+}
+System.out.println(sum);
 8. Print the product of the even integers from 2 to 16 inclusive.
+int product = 1;
+for (int i = 2; i <= 16; i++)
+{
+  product *= i;
+}
+System.out.println(product);
 9. Print the mathematical result of 1 * 2 + 2 * 3 + 3 * 4 + 4 * 5 + ... + 99 * 100.
+int sum = 0;
+for (int i = 1; i <= 99; i++)
+{
+  sum += i * (i + 1);
+}
+System.out.println(sum);
 
 Challenge Problems:
 10. The first two Fibonacci numbers are 1. Each term afterward is the sum of the previous two terms.
   a. Print the 40th Fibonacci number.
+  int f1 = 1;
+  int f2 = 1;
+  for (int i = 3; i <= 40; i++)
+  {
+    int f3 = f1 + f2;
+    f1 = f2;
+    f2 = f3;
+  }
+  System.out.println(f2); //term 40
+  
   b. Print the 75th Fibonacci number.
+  long f1 = 1;
+  long f2 = 1;
+  for (int i = 3; i <= 75; i++)
+  {
+    long f3 = f1 + f2;
+    f1 = f2;
+    f2 = f3;
+  }
+  System.out.println(f2); //term 40
+  
