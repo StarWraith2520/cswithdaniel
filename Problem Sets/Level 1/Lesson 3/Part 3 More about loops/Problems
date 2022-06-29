@@ -1,13 +1,22 @@
 1. Determine whether the following are true or false:
   a. A break statement must be in a while loop.
+  False
   b. When a break statement is executed, it breaks out of the innermost loop it is in.
+  True
   c. A break statement can be used to break out of an if block or an else block.
+  False - break must be used in a loop
   d. When a continue statement is used in a while loop, the execution goes to checking the condition.
+  True
   e. When a continue statement is used in a for loop, the execution goes to checking the condition.
+  False, it goes to the third statemet then the condition.
   f. During a nested loop, every time the outer loop runs one iteration, the inner loops must completely finish.
+  True
   g. Variables defined in an if block or else block will disappear after the block is executed.
+  True
   h. Variables defined in a loop will disappear after the block is executed.
+  True
   i. If a variable is defined in an outer loop, an inner loop nested inside the outer loop can access the variable.
+  True
  
 2. Determine the output:
 for (int i = 0; i < 17; i += 2)
@@ -18,6 +27,20 @@ for (int i = 0; i < 17; i += 2)
     System.out.println(i);
 }
 
+Output:
+0
+0
+2
+2
+4
+4
+6
+6
+8
+10
+10
+12
+
 3. Determine the output:
 for (int i = 0; i < 5; i++)
 {
@@ -27,6 +50,13 @@ for (int i = 0; i < 5; i++)
     }
     System.out.println();
 }
+
+Output:
+012345
+123456
+234567
+345678
+456789
 
 4. Determine the output:
 for (int i = 0; i < 5; i++)
@@ -41,6 +71,11 @@ for (int i = 0; i < 5; i++)
     }
     System.out.println();
 }
+
+Output:
+013
+124
+346
 
 5. Determine the output:
 for (int a = 0; a < 2; a++)
@@ -57,9 +92,41 @@ for (int a = 0; a < 2; a++)
     }
 }
 
+Output:
+0000
+0001
+0010
+0011
+0100
+0101
+0110
+0111
+1000
+1001
+1010
+1011
+1100
+1101
+1110
+1111
+
 6. Print all ordered pairs of integers (i, j) satisfying 14 <= i, j <= 19.
+for (int i = 14; i <= 19; i++)
+{
+  for (int j = 14; i <= 19; j++)
+  {
+    System.out.println("(" + i + ", " + j + ")");
+  }
+}
 
 7. Print all ordered pairs of integers (i, j) satisfying -5 <= i < j <= 5, i is odd, and j is odd.
+for (int i = -5; i <= 5; i += 2)
+{
+  for (int j = i + 2; j <= 5; j += 2)
+  {
+    System.out.println("(" + i + ", " + j + ")");
+  }
+}
 
 8. Print 5 squares of length 5 of dots aligned vertically.
 (Use nested loops to print the following 5 times)
@@ -69,15 +136,71 @@ for (int a = 0; a < 2; a++)
 .....
 .....
 
+for (int i = 0; i < 5; i++)
+{
+  for (int j = 0; j < 5; j++)
+  {
+    System.out.println(".....");
+  }
+  System.out.println();
+}
+
 9. Print all ordered pairs of integers (i, j) satisfying 0 <= i <= 10, i <= j <= 2 * i.
+for (int i = 0; i <= 10; i++)
+{
+ for (int j = i; j <= 2 * i; j++)
+ {
+   System.out.println("(" + i + ", " + j + ")");
+ }
+}
 
 
 Challenge Problems:
 
 10. Print all prime numbers less than 100.
+    for (int i = 2; i <= 100; i++)
+    {
+      boolean isPrime = true;
+      for (int j = 2; j < i; j++)
+      {
+        if (i % j == 0) {isPrime = false;}
+      }
+      if (isPrime) {System.out.println(i);}
+    }
 
 11. Print all ordered pairs of primes (p, q) satisfying p, q <= 50.
+for (int p = 2; p <= 50; p++)
+{
+  boolean pPrime = true;
+  for (int d = 2; d < p; d++)
+  {
+    if (p % d == 0) {pPrime = false;}
+  }
+  if (pPrime)
+  {
+    for (int q = 2; q <= 50; q++
+    {
+      boolean qPrime = true;
+      for (int d = 2; d < q; d++)
+      {
+        if (q % d == 0) {qPrime = false;}
+      }
+      if (qPrime) {System.out.println("(" + p + ", " + q + ")";}
+    }
+  }
+}
+
 
 12. Print the first 100 prime numbers.
-
+    int n = 100;
+    int numPrimes = 0;
+    for (int i = 2; numPrimes < n; i++)
+    {
+      boolean isPrime = true;
+      for (int j = 2; j < i; j++)
+      {
+        if (i % j == 0) {isPrime = false;}
+      }
+      if (isPrime) {System.out.println(i); numPrimes++;}
+    }
 
