@@ -8,6 +8,10 @@ switch (u)
     default: System.out.println("d");
 }
 
+Output:
+b
+c
+
 2. Determine the output:
 int u = 7;
 switch (u + 3)
@@ -17,6 +21,9 @@ switch (u + 3)
     case 9: System.out.println("c"); break;
     default: System.out.println("d");
 }
+
+Output:
+d
 
 3. Determine the output:
 for (int u = 0; u < 10; u++)
@@ -29,6 +36,21 @@ for (int u = 0; u < 10; u++)
         default: System.out.println("d");
     }
 }
+
+Output:
+d
+a
+b
+c
+d
+d
+d
+d
+d
+b
+c
+d
+c
 
 4. Determine the output:
 for (int i = 0; i < 5; i++)
@@ -44,6 +66,13 @@ for (int i = 0; i < 5; i++)
     }
 }
 
+Output:
+-2
+5
+4
+9
+16
+
 5. What is wrong with the following code? Explain in detail what would happen when this code is executed.
 for (int i = 0; i < 5; i++)
 {
@@ -56,3 +85,16 @@ for (int i = 0; i < 5; i++)
         default: System.out.println(i * i);
     }
 }
+
+We run through the code.
+Initially, i = 0, and we pass in 3 * 0 = 0 into the switch.
+i becomes -1. Then i becomes -2. Then -2 is printed and we break.
+i++ so i becomes -1.
+We switch -3 which goes to the default and we print 1.
+i++ so i becomes 0 which is back at the beginning.
+So, we repeatedly print:
+-2
+1
+-2
+1
+....
