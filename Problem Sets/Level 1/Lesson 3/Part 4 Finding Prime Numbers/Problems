@@ -1,24 +1,126 @@
 1. Use a computer program to determine whether the following are prime:
   a. 257
+  Yes
   b. 997
+  Yes
   c. 1001
+  No
   d. 1003
+  No
   e. 1573
+  No
   f. 65537
+  Yes
   g. 99587
+  No
   h. 14589127
+  No
   i. 32426899
+  No
   j. 99999997
+  No
 
 2. Print all prime numbers less than 100.
-
+    for (int i = 2; i <= 100; i++)
+    {
+      boolean isPrime = true;
+      for (int j = 2; j < i; j++)
+      {
+        if (i % j == 0) {isPrime = false;}
+      }
+      if (isPrime) {System.out.println(i);}
+    }
 3. Print all ordered pairs of primes (p, q) satisfying p, q <= 50.
+for (int p = 2; p <= 50; p++)
+{
+  boolean pPrime = true;
+  for (int d = 2; d < p; d++)
+  {
+    if (p % d == 0) {pPrime = false;}
+  }
+  if (pPrime)
+  {
+    for (int q = 2; q <= 50; q++
+    {
+      boolean qPrime = true;
+      for (int d = 2; d < q; d++)
+      {
+        if (q % d == 0) {qPrime = false;}
+      }
+      if (qPrime) {System.out.println("(" + p + ", " + q + ")";}
+    }
+  }
+}
 
 4. Print all ordered triples of primes (p, q, r) satisfying p, q, r <= 15.
+for (int p = 2; p <= 15; p++)
+{
+  boolean pPrime = true
+  for (int d = 2; d < p; d++)
+  {
+    if (p % d == 0) {pPrime = false;}
+  }
+  if (pPrime)
+  {
+    for (int q = 2; q <= 15; q++)
+    {
+      boolean qPrime = true;
+      for (int d = 2; d < q; d++)
+      {
+        if (q % d == 0) {qPrime = false;}
+      }
+      if (qPrime)
+      {
+        for (int r = 2; r <= 15; r++)
+        {
+          boolean rPrime = true;
+          for (int d = 2; d < r; d++)
+          {
+            if (r % d == 0) {rPrime = false;}
+          }
+          if (rPrime) {System.out.println("(" + p + ", " + q + ", " + r + ")");}
+        }
+      }
+     }
+   }
+}
 
 5. Print the first 100 prime numbers.
+  int n = 100;
+    int numPrimes = 0;
+    for (int i = 2; numPrimes < n; i++)
+    {
+      boolean isPrime = true;
+      for (int j = 2; j < i; j++)
+      {
+        if (i % j == 0) {isPrime = false;}
+      }
+      if (isPrime) {System.out.println(i); numPrimes++;}
+    }
+
 
 6. Print the first 100 prime numbers in the following format:
 The 1st prime number is 2.
 The 2nd prime number is 3.
 And so on
+
+int count = 0;
+for (int i = 2; count < 100; i++)
+{
+  boolean prime = true;
+  for (int j = 2; j < i; j++)
+  {
+    if (i % j == 0) {prime = false;}
+  }
+  if (prime)
+  {
+    count++;
+    System.out.print("The " + count);
+    if (count % 100 == 11 || count % 100 == 12 || count % 100 == 13) {System.out.print("th");}
+    else if (count % 10 == 1) {System.out.print("st");}
+    else if (count % 10 == 2) {System.out.print("nd");}
+    else if (count % 10 == 3) {System.out.print("rd");}
+    else {System.out.print("th");}
+    System.out.println(" prime number is " + i + ".");
+  }
+}
