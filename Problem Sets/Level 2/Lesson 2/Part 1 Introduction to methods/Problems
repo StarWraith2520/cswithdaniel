@@ -1,18 +1,29 @@
 1. Which of the following are allowed to be in the same class?
   Two methods with the same name and the same parameter types in the same order
+  No
   Two methods with the same name and different parameter types
+  Yes
   Two methods with different names and the same parameter types in the same order
+  Yes
   Two methods with different names and different parameter types
+  Yes
 
 
 2. Determine whether the following are true or false.
   a. Calling a method in another method is allowed.
+  True
   b. All methods must have parameters.
+  False
   c. All methods must return something.
+  False
   d. You can directly nest a method inside another method.
+  False
   e. Methods must be inside a class.
+  True
   f. You can always call a method inside of the parentheses of System.out.println();
+  False
   g. The main method must be the first method of a class.
+  False
 
 
 3. Determine the output:
@@ -33,10 +44,22 @@ public class P3
     }
 }
 
+Output:
+12
+
 4.
   a. Write a method named max which takes three ints and returns the max.
   b. Call the max method with three int values and print the result.
   
+public static int max(int a, int b, int c)
+{
+  int max = a;
+  if (b > max) {max = b;}
+  if (c > max) {max = c;}
+  return max;
+}
+System.out.println(max(1, 2, 3));
+
 5. Determine the output:
 public class P5
 {
@@ -50,6 +73,10 @@ public class P5
         return a * b;
     }
 }
+
+Output:
+35
+35
 
 
 6. Determine the output:
@@ -77,6 +104,13 @@ public class AAA
     } 
 }
 
+Output:
+1
+1
+1
+4
+36
+
 7. Determine the output:
 public class P7
 {
@@ -101,6 +135,25 @@ public class P7
     }
 }
 
+Output:
+5
+7
+7
+abc
+
 
 8. Create a method named max which takes an int array and returns the maximum value in the array.
 You may assume that the array has at least one element.
+
+public static int max(int[] arr)
+{
+  int max = arr[0];
+  for (int i = 1; i < arr.length; i++)
+  {
+    if (arr[i] > max)
+    {
+      max = arr[i];
+    }
+  }
+  return max;
+}
