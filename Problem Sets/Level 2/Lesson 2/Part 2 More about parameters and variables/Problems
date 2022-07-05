@@ -26,15 +26,21 @@ public class Main
     }
 }
 
+Output:
+20.0
+10.0
+-1/0
+0.9104477611940298
+
 
 2. Fix all errors then determine the output:
 public class Main
 {
-    public static int fun(double a, int b)
+    public static double fun(double a, int b)
     {
         return a + b;
     }
-    public static int fun(int a, double b)
+    public static double fun(int a, double b)
     {
         return a - b;
     }
@@ -45,18 +51,32 @@ public class Main
     }
 }
 
+Output:
+10.0
+-1.0
+
 
 3. True or false:
   a. Local variables (defined in a given method) can be accessed from other methods.
+  False
   b. Variables defined in a loop can be accessed outside the loop.
+  False
   c. Variables defined immediately before a block can be accessed from the block.
+  True
   d. Static variables can be accessed from any method in the same class.
+  True
   e. The order of methods within a class matters.
+  False
   f. The order of static variables matters in some cases.
+  True
   g. Variables defined inside an else block disappear when the block ends.
+  True
   h. All local variables must be initialized.
+  False
   i. All local variables must be initialized in order to be printed.
+  True
   j. All static variables must be initialized in order to be printed.
+  False
 
 
 4. Create a method that takes in as input 2 integers a, b and a char c.
@@ -67,9 +87,37 @@ If c is ‘/’ return a / b
 If c is ‘%’ return a % b
 Otherwise return 0
 
+public static int calculate(int a, int b, char c)
+{
+    switch(c)
+    {
+        case '+':
+            return a + b;
+        case '-':
+            return a - b;
+        case '*':
+            return a * b;
+        case '/'
+            return a / b;
+        case '%':
+            return a & b;
+        default:
+            return 0;
+    }
+}
 
 5. Create a method that takes in as input an array of Strings and
 returns a String equivalent to the concatenation of all the Strings in the array.
+
+public static String concatenateElements(String[] sArr)
+{
+    String result = "";
+    for (String e : sArr)
+    {
+        result += e;
+    }
+    return result;
+}
 
 
 6. Identify all errors:
@@ -89,3 +137,9 @@ public class Main
         fun(4.0, 7.8);
     }
 }
+
+Errors:
+No return statement for the methods
+fun(4, 6) is ambiguous
+fun(4.0, 7.8) has no match
+//Also, shouldn't both int fun(s) be double?
